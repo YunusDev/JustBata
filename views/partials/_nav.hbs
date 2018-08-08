@@ -1,0 +1,39 @@
+
+<div class="overlay overlay-contentpush">
+    <button type="button" class="overlay-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+
+    <nav>
+        <ul>
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/shop">Shop Now</a></li>
+            <li><a href="/contact">Contact</a></li>
+            {{#if user}}
+                <a class="p-2 text-dark" href="/admin/products">Products</a>
+                <a class="p-2 " style="color: red" href="#"><b><i>{{user.lastName}}</i></b></a>
+
+                <a class="p-2 text-dark" href="/logout">Logout</a>
+
+            {{/if}}
+            {{#if user}}
+            {{else}}
+                <a class="btn btn-outline-primary" style="margin-right: 10px" href="/login">Sign In</a>
+                <a class="btn btn-outline-danger " href="/register">Sign up</a>
+            {{/if}}
+        </ul>
+    </nav>
+</div>
+
+<div class="mobile-nav-button">
+    <button id="trigger-overlay" type="button"><i class="fa fa-bars" aria-hidden="true"></i></button>
+</div>
+<!-- cart details -->
+<div class="top_nav_right">
+    <div class="shoecart shoecart2 cart cart box_1">
+        <form action="#" method="post" class="last">
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="display" value="1">
+            <button class="top_shoe_cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+        </form>
+    </div>
+</div>

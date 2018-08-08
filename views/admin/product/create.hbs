@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Create Product</div>
+
+                <div class="card-body">
+
+                    <div class="col-lg-6">
+                        <!--@include('includes.form_error')-->
+                    </div>
+                    <form role="form" method="post" action="/admin/products/create" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name"> Name</label>
+                            <input type="text" class="form-control" value="Paracetamol" name="name" id="name" placeholder="Enter  Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name"> Price</label>
+                            <input type="number" class="form-control" value="500" name="price" id="price" placeholder="Enter  Price" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image"> Image</label>
+                            <input type="file" class="form-control" id="image" name="image" required>
+                        </div>
+                        <div class="form-group">
+                            <label for=""> Description</label>
+                            <textarea name="description" class="form-control" required id="" cols="30" rows="10"> I am good</textarea>
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <a href="/admin/products" class="btn btn-danger">Back</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
